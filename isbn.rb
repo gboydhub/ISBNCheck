@@ -9,6 +9,10 @@ class ISBNTest < Minitest::Test
     def test_isbn_param_is_string
         assert_kind_of String, InputStr
     end
+
+    def test_for_argv
+        refute_equal ARGV.length, 0
+    end
 end
 
 def check_isbn(str)
