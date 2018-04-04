@@ -24,3 +24,8 @@ def check_isbn(str)
 end
 
 InputStr = ""
+if(ARGV.length == 0)
+    abort("No ISBN given")
+end
+
+InputStr = ARGV[0]
