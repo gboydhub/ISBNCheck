@@ -4,6 +4,12 @@ def Check(str)
         return false
     end
 
+    if(str.length == 10)
+        for i in (10).downto(0)
+            puts str[i]
+        end
+    else
+    end
 
     return true
 end
