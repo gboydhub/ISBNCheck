@@ -1,7 +1,10 @@
 def Check(str)
-    if(str.length != 13 && str.length != 17)
+    str = str.tr('^0-9', '')
+    if(str.length != 10 && str.length != 13)
         return false
     end
+
+
     return true
 end
 
