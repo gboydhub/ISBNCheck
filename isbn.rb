@@ -52,6 +52,14 @@ def check_isbn(str)
         return true
     end
 
+    total = 0
+    for i in (12).downto(0)
+        total += (((i%2)*2)+1) * str[i].to_i
+    end
+    if(total%10 > 0)
+        return false
+    end
+
     return true
 end
 
