@@ -24,7 +24,7 @@ class ISBNTest < Minitest::Test
 
     def test_if_isbn_ten_valid
         assert check_isbn("0-7167-0344-0") == true
-        assert check_isbn("1-1111-1111-1") == false
+        assert check_isbn("0-1000-0000-0") == false
     end
 end
 
@@ -32,6 +32,19 @@ def check_isbn(str)
     str = str.tr('^0-9', '')
     if(str.length != 10 && str.length != 13)
         return false
+    end
+
+    if(str.length == 10)
+        total = 0
+        for i in (9).downto(0)
+            total += str[i].to_i * (i+1)
+        end
+        
+        if(total%11 > 0)
+            return false
+        end
+
+        return true
     end
 
     return true
