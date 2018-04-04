@@ -21,6 +21,11 @@ class ISBNTest < Minitest::Test
     def test_proper_stripped_format
         assert check_isbn("0-7167-0344-0") == true
     end
+
+    def test_if_isbn_ten_valid
+        assert check_isbn("0-7167-0344-0") == true
+        assert check_isbn("1-1111-1111-1") == false
+    end
 end
 
 def check_isbn(str)
@@ -28,7 +33,7 @@ def check_isbn(str)
     if(str.length != 10 && str.length != 13)
         return false
     end
-    
+
     return true
 end
 
