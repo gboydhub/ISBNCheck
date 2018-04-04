@@ -14,3 +14,5 @@ end
 def check_isbn(str)
     return false
 end
+
+InputStr = ""
