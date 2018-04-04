@@ -26,6 +26,11 @@ class ISBNTest < Minitest::Test
         assert check_isbn("0-7167-0344-0") == true
         assert check_isbn("0-1000-0000-0") == false
     end
+
+    def test_if_isbn_thirteen_valid
+        assert check_isbn("978-0-7167-0344-0") == true
+        assert check_isbn("913-3-7167-0344-0") == false
+    end
 end
 
 def check_isbn(str)
