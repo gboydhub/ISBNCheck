@@ -17,6 +17,10 @@ class ISBNTest < Minitest::Test
     def test_inputstr_length
         refute_equal InputStr.length, 0
     end
+
+    def test_input_stripped_size_10
+        assert_equal InputStr.length, 10
+    end
 end
 
 def check_isbn(str)
