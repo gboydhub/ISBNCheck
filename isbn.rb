@@ -18,8 +18,8 @@ class ISBNTest < Minitest::Test
         refute_equal InputStr.length, 0
     end
 
-    def test_input_stripped_size_10
-        assert_equal InputStr.length, 10
+    def test_proper_stripped_format
+        assert check_isbn("0-7167-0344-0") == true
     end
 end
 
