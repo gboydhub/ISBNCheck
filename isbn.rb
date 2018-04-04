@@ -5,9 +5,11 @@ def Check(str)
     end
 
     if(str.length == 10)
-        for i in (10).downto(0)
-            puts str[i]
+        total = 0
+        for i in (9).downto(0)
+            total += str[i].to_i * (i+1)
         end
+        puts (total%11).to_s
     else
     end
 
