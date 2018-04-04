@@ -24,7 +24,12 @@ class ISBNTest < Minitest::Test
 end
 
 def check_isbn(str)
-    return false
+    str = str.tr('^0-9', '')
+    if(str.length != 10 && str.length != 13)
+        return false
+    end
+    
+    return true
 end
 
 InputStr = ""
