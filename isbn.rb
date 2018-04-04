@@ -13,6 +13,10 @@ class ISBNTest < Minitest::Test
     def test_for_argv
         refute_equal ARGV.length, 0
     end
+
+    def test_inputstr_length
+        refute_equal InputStr.length, 0
+    end
 end
 
 def check_isbn(str)
